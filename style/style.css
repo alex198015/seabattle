@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.board {
+    margin: 10px;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+
+td {
+    border: 3px solid black;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hit {
+    background-image: url('../img/fire.svg'); 
+}
+
+
+.miss {
+    background-image: url('../img/cross.svg'); 
+    background-size: 20px;
+}
+
+.dead {
+    background-image: url('../img/skull.svg'); 
+}
+
+a {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    letter-spacing: 6px;
+    border: 2px solid rgb(255, 66, 29);
+    color: #FF421D;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  a:hover {
+    color: #fff;
+  }
+  a span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 66, 29, 0.5);
+    transition: 0.5s;
+    z-index: -1;
+  }
+  a span:nth-child(1) {
+    top: -100%;
+    left: -100%;
+  }
+  a:hover span:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  a span:nth-child(2) {
+    bottom: -100%;
+    left: -100%;
+  }
+  a:hover span:nth-child(2) {
+    bottom: 0;
+    left: 0;
+  }
+  a span:nth-child(3) {
+    top: -100%;
+    right: -100%;
+  }
+  a:hover span:nth-child(3) {
+    top: 0;
+    right: 0;
+  }
+  a span:nth-child(4) {
+    bottom: -100%;
+    right: -100%;
+  }
+  a:hover span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+  }
